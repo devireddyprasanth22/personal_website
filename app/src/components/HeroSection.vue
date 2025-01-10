@@ -2,16 +2,15 @@
     <section class="py-32">
     <div class="max-w-screen-xl px-4 py-8 mx-auto flex mb-4">
 
-        <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 w-1/2 h-12 ">
+        <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 w-2/3 h-12 ">
         <div class="mr-auto place-self-center lg:col-span-7">
-            <span class="flex">
-            <h2 class="max-w-xl mb-2 text-2xl tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">Hi, I am Prasanth <span class="wave">👋</span></h2>
-        </span>
-            <p class="leading-8 max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-2xl dark:text-gray-400 ">A software engineer dedicated to exploring different technologies and applying learning in practical environments</p>
+            <h2 class="max-w-xl mb-2 text-2xl tracking-tight leading-none md:text-5xl xl:text-7xl dark:text-white">Hi, I am Prasanth <span class="wave">👋</span></h2>
+            <p class="leading-relaxed max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-2xl dark:text-gray-400 ">A software engineer dedicated to exploring different technologies and applying learning in practical environments</p>
+            <p class="leading-relaxed max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-2xl dark:text-gray-400 ">When I am not in front of my workstation, I love staying active and trying a bunch of new things</p>
         </div>
         </div>
-    <div class="w-1/2 h-12 " width="384" height="512">
-        <img src="../../public/hero_pic.jpg">
+    <div class="w-1/3">
+        <img src="../../public/hero_pic.jpg" style="height: 500px;">
     </div>
     </div>
 </section> 
