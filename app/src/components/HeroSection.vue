@@ -37,3 +37,8 @@
   100% { transform: rotate( 0.0deg) }
 }
 </style>
+<script>
+export default {
+    name: "HeroSection"
+}
+</script>
