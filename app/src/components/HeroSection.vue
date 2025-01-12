@@ -6,7 +6,7 @@
         <div class="mr-auto place-self-center lg:col-span-7 py-12">
             <h2 class="max-w-xl mb-2 text-2xl tracking-tight leading-none md:text-5xl xl:text-7xl dark:text-white">Hi, I am Prasanth <span class="wave">👋</span></h2>
             <p class="leading-8 max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-2xl dark:text-gray-400 ">A software engineer dedicated to exploring different technologies and applying learning in practical environments. </p>
-            <p class="leading-8 max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-2xl dark:text-gray-400 ">Some of my recent interests include <span id="e1">web development</span>,  <span id="e2"> molecular modelling using machine learning</span> and  <span id="e3">HPC to solve computationally intensive tasks</span></p>
+            <p class="leading-8 max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-2xl dark:text-gray-400 ">Some of my recent works include <span id="e1">web development</span>,  <span id="e2"> molecular modelling using machine learning</span> and  <span id="e3">HPC to solve computationally intensive tasks</span></p>
         </div>
         </div>
     <div class="w-1/3">
