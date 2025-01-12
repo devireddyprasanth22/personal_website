@@ -1,5 +1,5 @@
 <template>
-    <section class="py-32">
+    <section class="mt-32">
     <div class="max-w-screen-xl px-4 py-8 mx-auto flex mb-4">
 
         <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 w-2/3 h-12 ">
@@ -13,6 +13,7 @@
         <img class = "rounded-lg shadow-lg shadow-green-900" src="../../public/hero_pic.jpg" style="height: 500px;">
     </div>
     </div>
+
 </section> 
 </template>
 <script>
