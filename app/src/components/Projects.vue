@@ -5,8 +5,16 @@
                 <h2 class="max-w-xl mb-2 text-2xl tracking-tight leading-none md:text-5xl xl:text-5xl dark:text-white">Projects</h2>
             </div>
         </div>
-
+        <ProjectTile></ProjectTile>
     </section>
 </template>
 <script>
+import ProjectTile from './ProjectTile.vue';
+export default {
+    name: "Projects",
+    components: {
+        ProjectTile
+    }
+}
+
 </script>
