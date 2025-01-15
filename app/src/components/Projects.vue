@@ -5,7 +5,10 @@
                 <h2 class="max-w-xl mb-2 text-2xl tracking-tight leading-none md:text-5xl xl:text-5xl dark:text-white">Projects</h2>
             </div>
         </div>
-        <ProjectTile></ProjectTile>
+        <ProjectTile title="Smart Energy Management System Dashboard" description="Project desc"></ProjectTile>
+        <ProjectTile reversed="True" title="Smart Trolley" description="Project desc"></ProjectTile>
+        <ProjectTile title="RentConnect" description="Project desc"></ProjectTile>
+        <ProjectTile reversed="True" title="Plutus charts" description="Project desc"></ProjectTile>
     </section>
 </template>
 <script>
