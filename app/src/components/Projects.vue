@@ -9,18 +9,19 @@
         </div>
         <ProjectTile title="Smart Energy Management System Dashboard"
             description="An energy managment dashboard that allows users to understand their household consumption and turn appliances on/off whenever needed"
-            imageURL="/SHEMS.png">
+            imageURL="/SHEMS.png" gitURL="https://github.com/MonashSmartCityLivingLab/react_dashboard">
         </ProjectTile>
         <ProjectTile reversed="True" title="Smart Trolley"
             description="A smart shopping trolley that is aimed to simplify the shopping experience by taking away the load from the shopper. Built using geared motors, h-bridge, arduino, BLE and a range of sensors. Controlled through a simple web interface"
-            imageURL="/trolley.png">
+            imageURL="/trolley.png" gitURL="https://github.com/devireddyprasanth22/Smart-trolley-control">
         </ProjectTile>
         <ProjectTile title="RentConnect"
             description="A web based rental management application that enables easy-to-use access to rental applications for both renters and property managers, and is an effective tool to manage rental properties"
-            imageURL=" /Rentconnect.png"></ProjectTile>
+            imageURL=" /Rentconnect.png" gitURL="https://github.com/devireddyprasanth22/RentConnect/tree/main">
+        </ProjectTile>
         <ProjectTile reversed="True" title="Password Manager"
             description="A CLI password management tool built out of my personal need of storing my passwords in a safe and easily accessible manner"
-            imageURL="/pswd.png">
+            imageURL="/pswd.png" gitURL="https://github.com/devireddyprasanth22/Password-Manager">
         </ProjectTile>
     </section>
 </template>
