@@ -89,23 +89,40 @@
     }
 }
 </style>
-<script>
+<script setup>
+import { onMounted } from 'vue';
 import { annotate, annotationGroup } from 'rough-notation';
 
-export default {
-    name: "HeroSection",
-    mounted() {
-
+onMounted(() => {
     const e1 = document.querySelector('#e1');
     const e2 = document.querySelector('#e2');
     const e3 = document.querySelector('#e3');
-    if(e1 && e2 && e3){
-        const a1 = annotate(e1, { type: 'underline', color: 'red', multiline: true, animationDuration: 1000, iterations: 1});
-        const a2 = annotate(e2, { type: 'underline', color: 'red', multiline: true, animationDuration: 1000, iterations: 1 });
-        const a3 = annotate(e3, { type: 'underline', color: 'red', multiline: true, animationDuration: 1000, iterations: 1 });
+
+    if (e1 && e2 && e3) {
+        const a1 = annotate(e1, {
+            type: 'underline',
+            color: 'red',
+            multiline: true,
+            animationDuration: 1000,
+            iterations: 1
+        });
+        const a2 = annotate(e2, {
+            type: 'underline',
+            color: 'red',
+            multiline: true,
+            animationDuration: 1000,
+            iterations: 1
+        });
+        const a3 = annotate(e3, {
+            type: 'underline',
+            color: 'red',
+            multiline: true,
+            animationDuration: 1000,
+            iterations: 1
+        });
+
         const arr = annotationGroup([a1, a2, a3]);
         arr.show();
     }
-}
-}
+});
 </script>

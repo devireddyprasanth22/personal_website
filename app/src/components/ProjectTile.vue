@@ -3,10 +3,10 @@
         class="tile-sp:hidden hover:translate-y-[-5px] w-[70%] mx-auto my-[75px] bg-gray-800 border-accent border-opacity-100 flex flex-row shadow-lg "
         style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
         <!-- Image -->
-        <div class="w-3/6 object-cover flex justify-center align-center overflow-hidden">
+        <div class="w-3/6 object-cover flex justify-center items-center overflow-hidden">
             <a :href=gitURL target="_blank">
-                <img class="opacity-50 hover:opacity-100 shrink-0 min-h-full min-w-full  max-h-[400px]" :src=imageURL
-                    alt="">
+                <img class="opacity-50 hover:opacity-100 shrink-0 min-h-full min-w-full max-h-[400px]" :src=imageURL
+                    alt="Project Image" loading="eager">
             </a>
         </div>
         <div class="w-3/6 mt-[15px] mx-[5px] p-[20px] bg-inherit relative">
@@ -80,38 +80,46 @@
         </div>
 
         <!-- Image -->
-        <div class="w-3/6 object-cover  flex justify-center align-center overflow-hidden">
+        <div class="w-3/6 object-cover  flex justify-center items-center overflow-hidden">
             <a :href=gitURL target="_blank">
-                <img class=" opacity-50 hover:opacity-100 shrink-0 min-h-full min-w-full " :src=imageURL alt="">
+                <img class=" opacity-50 hover:opacity-100 shrink-0 min-h-full min-w-full " :src=imageURL
+                    alt="Project Image" loading="eager">
             </a>
         </div>
     </div>
 
 </template>
-<script>
-export default {
-    name: 'ProjectTile',
-    props: {
-        reversed: {
-            type: Boolean,
-            default: false
-        },
-        title: {
-            type: String,
-            required: true
-        },
-        description: {
-            type: String,
-            required: true
-        },
-        imageURL: {
-            type: String,
-            required: true
-        },
-        gitURL: {
-            type: String,
-            required: true
-        }
-    }
-}
+<script setup>
+defineProps({
+    reversed: Boolean,
+    title: String,
+    description: String,
+    imageURL: String,
+    gitURL: String
+})
+// export default {
+//     name: 'ProjectTile',
+//     props: {
+//         reversed: {
+//             type: Boolean,
+//             default: false
+//         },
+//         title: {
+//             type: String,
+//             required: true
+//         },
+//         description: {
+//             type: String,
+//             required: true``
+//         },
+//         imageURL: {
+//             type: String,
+//             required: true
+//         },
+//         gitURL: {
+//             type: String,
+//             required: true
+//         }
+//     }
+// }
 </script>
