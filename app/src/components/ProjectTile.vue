@@ -2,7 +2,12 @@
     <div v-if="reversed"
         class="tile-sp:hidden hover:translate-y-[-5px] w-[70%] mx-auto my-[75px] bg-gray-800 border-accent border-opacity-100 flex flex-row shadow-lg "
         style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
-        <div class=" w-3/6 object-cover flex justify-center align-center overflow-hidden">
+        <!-- Image -->
+        <div class="w-3/6 object-cover flex justify-center align-center overflow-hidden">
+            <a :href=gitLink target="_blank">
+                <img class="opacity-50 hover:opacity-100 shrink-0 min-h-full min-w-full  max-h-[400px]" :src=imageURL
+                    alt="">
+            </a>
         </div>
         <div class="w-3/6 mt-[15px] mx-[5px] p-[20px] bg-inherit relative">
 
@@ -57,8 +62,11 @@
         </div>
 
         <!-- Image -->
-        <!-- <div class="w-3/6 object-cover  flex justify-center align-center overflow-hidden">
-        </div> -->
+        <div class="w-3/6 object-cover  flex justify-center align-center overflow-hidden">
+            <a :href=gitLink target="_blank">
+                <img class=" opacity-50 hover:opacity-100 shrink-0 min-h-full min-w-full " :src=imageURL alt="">
+            </a>
+        </div>
     </div>
 
 </template>
@@ -78,6 +86,10 @@ export default {
             type: String,
             required: true
         },
+        imageURL: {
+            type: String,
+            required: true
+        }
     }
 }
 </script>

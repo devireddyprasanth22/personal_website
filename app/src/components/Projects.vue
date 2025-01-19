@@ -7,10 +7,21 @@
                     Projects</h2>
             </div>
         </div>
-        <ProjectTile title="Smart Energy Management System Dashboard" description="Project desc"></ProjectTile>
-        <ProjectTile reversed="True" title="Smart Trolley" description="Project desc"></ProjectTile>
-        <ProjectTile title="RentConnect" description="Project desc"></ProjectTile>
-        <ProjectTile reversed="True" title="Plutus charts" description="Project desc"></ProjectTile>
+        <ProjectTile title="Smart Energy Management System Dashboard"
+            description="An energy managment dashboard that allows users to understand their household consumption and turn appliances on/off whenever needed"
+            imageURL="/SHEMS.png">
+        </ProjectTile>
+        <ProjectTile reversed="True" title="Smart Trolley"
+            description="A smart shopping trolley that is aimed to simplify the shopping experience by taking away the load from the shopper. Built using geared motors, h-bridge, arduino, BLE and a range of sensors. Controlled through a simple web interface"
+            imageURL="/trolley.png">
+        </ProjectTile>
+        <ProjectTile title="RentConnect"
+            description="A web based rental management application that enables easy-to-use access to rental applications for both renters and property managers, and is an effective tool to manage rental properties"
+            imageURL=" /Rentconnect.png"></ProjectTile>
+        <ProjectTile reversed="True" title="Password Manager"
+            description="A CLI password management tool built out of my personal need of storing my passwords in a safe and easily accessible manner"
+            imageURL="/pswd.png">
+        </ProjectTile>
     </section>
 </template>
 <script>
