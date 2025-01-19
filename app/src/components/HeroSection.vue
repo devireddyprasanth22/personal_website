@@ -5,31 +5,34 @@
             <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 w-2/3 h-12 ">
                 <div class="mr-auto place-self-center lg:col-span-7 py-12">
                     <h2
-                        class="max-w-xl mb-2 text-2xl tracking-tight leading-none md:text-5xl xl:text-7xl dark:text-white">
+                        class="max-w-xl mb-2 text-2xl tracking-tight leading-none md:text-5xl xl:text-7xl dark:text-black">
                         Hi, I am Prasanth <span class="wave">👋</span></h2>
                     <p
-                        class="leading-8 max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-2xl dark:text-gray-400 ">
+                        class="leading-8 max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-2xl dark:text-gray-800 ">
                         A software engineer dedicated to exploring different technologies and applying learning in
                         practical environments. </p>
                     <p
-                        class="leading-8 max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-2xl dark:text-gray-400 ">
+                        class="leading-8 max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-2xl dark:text-gray-800 ">
                         Some of my recent works include <span id="e1">smart energy management systems</span>, <span
                             id="e2"> molecular modelling using machine learning</span> and <span id="e3">HPC to solve
                             computationally intensive tasks</span></p>
-                    <button
-                        class="cursor-pointer flex justify-between bg-gray-800 px-3 py-2 rounded-full text-white tracking-wider shadow-xl hover:bg-gray-900 hover:scale-105 duration-500 hover:ring-1 font-mono w-[120px]">
-                        Resume
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                            stroke="currentColor" class="w-5 h-5 animate-bounce">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3"></path>
-                        </svg>
-                    </button>
+                    <a href="https://drive.google.com/file/d/15N7mCcUF-9FiI2pAZCvAox23z95Qt768/view?usp=share_link"
+                        target="_blank">
+                        <button
+                            class="cursor-pointer flex justify-between bg-gray-800 px-3 py-2 rounded-full text-white tracking-wider shadow-xl hover:bg-gray-900 hover:scale-105 duration-500 hover:ring-1 font-mono w-[120px]">
+                            Resume
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                stroke="currentColor" class="w-5 h-5 animate-bounce">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3"></path>
+                            </svg>
+                        </button>
+                    </a>
                 </div>
             </div>
             <div class="w-1/3">
-                <img class="rounded-lg shadow-lg shadow-green-900" src="../../public/hero_pic.jpg"
-                    style="height: 500px;">
+                <img class="rounded-lg shadow-lg" src="../../public/hero_pic.jpg"
+                    style="height: 500px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
             </div>
         </div>
 

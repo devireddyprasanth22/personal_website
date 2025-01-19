@@ -1,7 +1,8 @@
 <template>
     <div v-if="reversed"
-        class="tile-sp:hidden hover:translate-y-[-5px] w-[70%] mx-auto my-[75px] bg-gray-800 border-accent border-opacity-100 flex flex-row shadow-lg shadow-green-900">
-        <div class="w-3/6 object-cover  flex justify-center align-center overflow-hidden">
+        class="tile-sp:hidden hover:translate-y-[-5px] w-[70%] mx-auto my-[75px] bg-gray-800 border-accent border-opacity-100 flex flex-row shadow-lg "
+        style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+        <div class=" w-3/6 object-cover flex justify-center align-center overflow-hidden">
         </div>
         <div class="w-3/6 mt-[15px] mx-[5px] p-[20px] bg-inherit relative">
 
@@ -29,7 +30,8 @@
     </div>
     <!--Content on left and project pic on left-->
     <div v-else
-        class="tile-sp:hidden hover:translate-y-[-5px] w-[70%] mx-auto my-[75px] bg-gray-800 border-accent border-opacity-100 flex flex-row shadow-lg shadow-green-900">
+        class="tile-sp:hidden hover:translate-y-[-5px] w-[70%] mx-auto my-[75px] bg-gray-800 border-accent border-opacity-100 flex flex-row shadow-lg "
+        style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
         <!-- Content Container -->
         <div class="w-3/6 mt-[15px] mx-[5px] p-[20px] bg-inherit relative">
 
