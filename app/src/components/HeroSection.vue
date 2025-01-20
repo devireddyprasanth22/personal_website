@@ -16,6 +16,7 @@
                         Some of my recent works include <span id="e1">smart energy management systems</span>, <span
                             id="e2"> molecular modelling using machine learning</span> and <span id="e3">HPC to solve
                             computationally intensive tasks</span></p>
+                    <TechStack></TechStack>
                     <a href="https://drive.google.com/file/d/15N7mCcUF-9FiI2pAZCvAox23z95Qt768/view?usp=share_link"
                         target="_blank">
                         <button
@@ -33,11 +34,11 @@
             <div class="w-1/3 relative">
                 <div id="carousel" class="rounded-lg shadow-lg overflow-hidden" style="height: 500px; position: relative;">
                     <div class="carousel-container" style="position: relative; height: 100%; width: 100%;">
-                        <img class="carousel-image" src="@/assets/images/hero_pic.jpg" alt="Hero">
-                        <img class="carousel-image" src="@/assets/images/boulder1.jpg" alt="Boulder">
-                        <img class="carousel-image" src="@/assets/images/photo.jpg" alt="Photo">
-                        <img class="carousel-image" src="@/assets/images/fyp.jpg" alt="Photo">
-                        <img class="carousel-image" src="@/assets/images/ocean.jpg" alt="Photo">
+                        <img class="carousel-image" src="@/assets/images/carousel/hero_pic.jpg" alt="Hero">
+                        <img class="carousel-image" src="@/assets/images/carousel/boulder1.jpg" alt="Boulder">
+                        <img class="carousel-image" src="@/assets/images/carousel/photo.jpg" alt="Photo">
+                        <img class="carousel-image" src="@/assets/images/carousel/fyp.jpg" alt="Photo">
+                        <img class="carousel-image" src="@/assets/images/carousel/ocean.jpg" alt="Photo">
                     </div>
                 </div>
                 <button id="prev" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-2 rounded-l-lg opacity-75 hover:opacity-100 transition-opacity -left-8">‹</button>
@@ -118,6 +119,7 @@
 <script setup lang="ts">
 import { onMounted } from 'vue';
 import { annotate, annotationGroup } from 'rough-notation';
+import TechStack from '@/components/TechStack.vue'
 
 // Carousel functionality
 onMounted(() => {
