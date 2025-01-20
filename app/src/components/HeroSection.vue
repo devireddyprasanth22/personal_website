@@ -31,15 +31,19 @@
                 </div>
             </div>
             <div class="w-1/3 relative">
-    <div id="carousel" class="rounded-lg shadow-lg overflow-hidden" style="height: 500px; position: relative;">
-        <img class="carousel-image" src="/hero_pic.jpg" alt="Hero" style="width: 100%; height: 100%; object-fit: cover;">
-        <img class="carousel-image hidden" src="/boulder1.jpg" alt="Boulder" style="width: 100%; height: 100%; object-fit: cover;">
-        <img class="carousel-image hidden" src="/photo.jpg" alt="Photo" style="width: 100%; height: 100%; object-fit: cover;">
-    </div>
-    <!-- Navigation buttons -->
-    <button id="prev" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-2 rounded-l-lg">‹</button>
-    <button id="next" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-2 rounded-r-lg">›</button>
-</div>
+                <div id="carousel" class="rounded-lg shadow-lg overflow-hidden" style="height: 500px; position: relative;">
+                    <div class="carousel-container" style="position: relative; height: 100%; width: 100%;">
+                        <img class="carousel-image" src="/hero_pic.jpg" alt="Hero">
+                        <img class="carousel-image" src="/boulder1.jpg" alt="Boulder">
+                        <img class="carousel-image" src="/photo.jpg" alt="Photo">
+                        <img class="carousel-image" src="/fyp.jpg" alt="Photo">
+                        <img class="carousel-image" src="/cooking.jpg" alt="Photo">
+                        <img class="carousel-image" src="/ocean.jpg" alt="Photo">
+                    </div>
+                </div>
+                <button id="prev" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-2 rounded-l-lg opacity-75 hover:opacity-100 transition-opacity -left-8">‹</button>
+                <button id="next" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-2 rounded-r-lg opacity-75 hover:opacity-100 transition-opacity -right-8">›</button>
+            </div>
         </div>
 
     </section>
@@ -56,7 +60,24 @@
     /* Pivot around the bottom-left palm */
     display: inline-block;
 }
+.carousel-container {
+    position: relative;
+}
 
+.carousel-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-image.active {
+    opacity: 1;
+}
 
 
 @keyframes wave-animation {
@@ -101,8 +122,8 @@ import { annotate, annotationGroup } from 'rough-notation';
 
 // Carousel functionality
 onMounted(() => {
-    // Carousel setup
-    const images = document.querySelectorAll('.carousel-image') as NodeListOf<HTMLElement>;
+     // Carousel setup
+     const images = document.querySelectorAll('.carousel-image') as NodeListOf<HTMLElement>;
     const prevButton = document.getElementById('prev') as HTMLElement;
     const nextButton = document.getElementById('next') as HTMLElement;
     let currentIndex = 0;
@@ -110,7 +131,7 @@ onMounted(() => {
 
     const showImage = (index: number) => {
         images.forEach((img, i) => {
-            img.classList.toggle('hidden', i !== index);
+            img.classList.toggle('active', i === index);
         });
     };
 
@@ -132,6 +153,9 @@ onMounted(() => {
         clearInterval(interval);
     };
 
+    // Initialize first image
+    showImage(currentIndex);
+    
     if (prevButton && nextButton) {
         prevButton.addEventListener('click', () => {
             stopCarousel();
@@ -146,7 +170,6 @@ onMounted(() => {
         });
     }
 
-    showImage(currentIndex);
     startCarousel();
 
     // Rough Notation functionality
@@ -182,4 +205,3 @@ onMounted(() => {
     }
 });
 </script>
-
