@@ -1,5 +1,5 @@
 <template>
-    <section class="mt-32">
+    <section class="mt-24">
         <div class="max-w-screen-xl px-4 py-8 mx-auto flex mb-4">
 
             <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 w-2/3 h-12 ">
@@ -33,12 +33,11 @@
             <div class="w-1/3 relative">
                 <div id="carousel" class="rounded-lg shadow-lg overflow-hidden" style="height: 500px; position: relative;">
                     <div class="carousel-container" style="position: relative; height: 100%; width: 100%;">
-                        <img class="carousel-image" src="/hero_pic.jpg" alt="Hero">
-                        <img class="carousel-image" src="/boulder1.jpg" alt="Boulder">
-                        <img class="carousel-image" src="/photo.jpg" alt="Photo">
-                        <img class="carousel-image" src="/fyp.jpg" alt="Photo">
-                        <img class="carousel-image" src="/cooking.jpg" alt="Photo">
-                        <img class="carousel-image" src="/ocean.jpg" alt="Photo">
+                        <img class="carousel-image" src="@/assets/images/hero_pic.jpg" alt="Hero">
+                        <img class="carousel-image" src="@/assets/images/boulder1.jpg" alt="Boulder">
+                        <img class="carousel-image" src="@/assets/images/photo.jpg" alt="Photo">
+                        <img class="carousel-image" src="@/assets/images/fyp.jpg" alt="Photo">
+                        <img class="carousel-image" src="@/assets/images/ocean.jpg" alt="Photo">
                     </div>
                 </div>
                 <button id="prev" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-2 rounded-l-lg opacity-75 hover:opacity-100 transition-opacity -left-8">‹</button>
