@@ -31,15 +31,13 @@
                 </div>
             </div>
             <div class="w-1/3">
-                <img class="rounded-lg shadow-lg" src="../../public/hero_pic.jpg"
+                <img class="rounded-lg shadow-lg" src="/hero_pic.jpg"
                     style="height: 500px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
             </div>
         </div>
 
     </section>
 </template>
-<script>
-</script>
 <style scoped>
 .wave {
     animation-name: wave-animation;
@@ -89,16 +87,18 @@
     }
 }
 </style>
-<script setup>
+<script setup lang="ts">
 import { onMounted } from 'vue';
 import { annotate, annotationGroup } from 'rough-notation';
 
 onMounted(() => {
-    const e1 = document.querySelector('#e1');
-    const e2 = document.querySelector('#e2');
-    const e3 = document.querySelector('#e3');
+    // Type annotations for elements
+    const e1: HTMLElement | null = document.querySelector('#e1');
+    const e2: HTMLElement | null = document.querySelector('#e2');
+    const e3: HTMLElement | null = document.querySelector('#e3');
 
     if (e1 && e2 && e3) {
+        // Type annotations for annotations
         const a1 = annotate(e1, {
             type: 'underline',
             color: 'red',
@@ -121,6 +121,7 @@ onMounted(() => {
             iterations: 1
         });
 
+        // Group annotations
         const arr = annotationGroup([a1, a2, a3]);
         arr.show();
     }

@@ -45,138 +45,155 @@
         </div>
     </div>
 </template>
-
-<script setup>
+<script setup lang="ts">
 import { ref, onMounted } from 'vue';
 import axios from 'axios';
 
+// Define types for Spotify API responses
+interface SpotifyTrack {
+  track: {
+    name: string;
+    artists: { name: string }[];
+    album: { images: { url: string }[] };
+  };
+  played_at: string;
+}
+
+interface TokenResponse {
+  access_token: string;
+  refresh_token?: string;
+}
+
 // Reactive state variables
-const recentTracks = ref([]);
-const topThreeTracks = ref([]);
-const accessToken = ref(null);
-const refreshToken = ref(null);
-const loading = ref(true);
+const recentTracks = ref<SpotifyTrack[]>([]);
+const topThreeTracks = ref<SpotifyTrack[]>([]);
+const accessToken = ref<string | null>(null);
+const refreshToken = ref<string | null>(null);
+const loading = ref<boolean>(true);
 
 const redirectUri = 'http://localhost:5173/callback';
-const clientId = "";
-const clientSecret = "";
+const clientId = '';
+const clientSecret = '';
 
 // Initialize authentication
-const initializeAuth = () => {
-    const storedAccessToken = localStorage.getItem('spotify_access_token');
-    const storedRefreshToken = localStorage.getItem('spotify_refresh_token');
-    const urlParams = new URLSearchParams(window.location.search);
-    const code = urlParams.get('code');
+const initializeAuth = (): void => {
+  const storedAccessToken = localStorage.getItem('spotify_access_token');
+  const storedRefreshToken = localStorage.getItem('spotify_refresh_token');
+  const urlParams = new URLSearchParams(window.location.search);
+  const code = urlParams.get('code');
 
-    if (code) {
-        window.history.replaceState({}, document.title, window.location.pathname);
-        exchangeCodeForToken(code);
-    } else if (storedAccessToken && storedRefreshToken) {
-        accessToken.value = storedAccessToken;
-        refreshToken.value = storedRefreshToken;
-        fetchRecentTracks();
-    } else {
-        initiateSpotifyAuth();
-    }
-};
-
-const initiateSpotifyAuth = () => {
-    const scope = encodeURIComponent("user-read-recently-played");
-    window.location.href = `https://accounts.spotify.com/authorize?client_id=${clientId}&response_type=code&redirect_uri=${encodeURIComponent(redirectUri)}&scope=${scope}`;
-};
-
-const exchangeCodeForToken = async (code) => {
-    const bodyParams = new URLSearchParams();
-    bodyParams.append('grant_type', 'authorization_code');
-    bodyParams.append('code', code);
-    bodyParams.append('redirect_uri', redirectUri);
-
-    try {
-        const response = await axios.post('https://accounts.spotify.com/api/token', bodyParams, {
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded',
-                Authorization: 'Basic ' + btoa(`${clientId}:${clientSecret}`)
-            }
-        });
-
-        accessToken.value = response.data.access_token;
-        refreshToken.value = response.data.refresh_token;
-
-        localStorage.setItem('spotify_access_token', accessToken.value);
-        localStorage.setItem('spotify_refresh_token', refreshToken.value);
-
-        fetchRecentTracks();
-    } catch (error) {
-        console.error('Error exchanging code for token:', error);
-        loading.value = false;
-    }
-};
-
-const refreshAccessToken = async () => {
-    const bodyParams = new URLSearchParams();
-    bodyParams.append('grant_type', 'refresh_token');
-    bodyParams.append('refresh_token', refreshToken.value);
-
-    try {
-        const response = await axios.post('https://accounts.spotify.com/api/token', bodyParams, {
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded',
-                Authorization: 'Basic ' + btoa(`${clientId}:${clientSecret}`)
-            }
-        });
-
-        accessToken.value = response.data.access_token;
-        localStorage.setItem('spotify_access_token', accessToken.value);
-
-        if (response.data.refresh_token) {
-            refreshToken.value = response.data.refresh_token;
-            localStorage.setItem('spotify_refresh_token', refreshToken.value);
-        }
-
-        return true;
-    } catch (error) {
-        console.error('Error refreshing token:', error);
-        clearTokensAndReauth();
-        return false;
-    }
-};
-
-const clearTokensAndReauth = () => {
-    localStorage.removeItem('spotify_access_token');
-    localStorage.removeItem('spotify_refresh_token');
+  if (code) {
+    window.history.replaceState({}, document.title, window.location.pathname);
+    exchangeCodeForToken(code);
+  } else if (storedAccessToken && storedRefreshToken) {
+    accessToken.value = storedAccessToken;
+    refreshToken.value = storedRefreshToken;
+    fetchRecentTracks();
+  } else {
     initiateSpotifyAuth();
+  }
 };
 
-const fetchRecentTracks = async () => {
-    loading.value = true;
-    try {
-        const response = await axios.get("https://api.spotify.com/v1/me/player/recently-played", {
-            headers: {
-                Authorization: `Bearer ${accessToken.value}`
-            }
-        });
+const initiateSpotifyAuth = (): void => {
+  const scope = encodeURIComponent('user-read-recently-played');
+  window.location.href = `https://accounts.spotify.com/authorize?client_id=${clientId}&response_type=code&redirect_uri=${encodeURIComponent(
+    redirectUri
+  )}&scope=${scope}`;
+};
 
-        recentTracks.value = response.data.items;
-        topThreeTracks.value = recentTracks.value.slice(0, 3);
-        loading.value = false;
-    } catch (error) {
-        if (error.response && error.response.status === 401) {
-            const refreshed = await refreshAccessToken();
-            if (refreshed) {
-                fetchRecentTracks();
-            }
-        } else {
-            console.error('Error fetching recent tracks:', error);
-            loading.value = false;
-        }
+const exchangeCodeForToken = async (code: string): Promise<void> => {
+  const bodyParams = new URLSearchParams();
+  bodyParams.append('grant_type', 'authorization_code');
+  bodyParams.append('code', code);
+  bodyParams.append('redirect_uri', redirectUri);
+
+  try {
+    const response = await axios.post<TokenResponse>(
+      'https://accounts.spotify.com/api/token',
+      bodyParams,
+      {
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+          Authorization: 'Basic ' + btoa(`${clientId}:${clientSecret}`),
+        },
+      }
+    );
+
+    accessToken.value = response.data.access_token;
+    refreshToken.value = response.data.refresh_token || null;
+
+    localStorage.setItem('spotify_access_token', accessToken.value);
+    if (refreshToken.value) {
+      localStorage.setItem('spotify_refresh_token', refreshToken.value);
     }
+
+    fetchRecentTracks();
+  } catch (error) {
+    console.error('Error exchanging code for token:', error);
+    loading.value = false;
+  }
 };
 
+const refreshAccessToken = async (): Promise<void> => {
+  if (!refreshToken.value) return;
+
+  const bodyParams = new URLSearchParams();
+  bodyParams.append('grant_type', 'refresh_token');
+  bodyParams.append('refresh_token', refreshToken.value);
+
+  try {
+    const response = await axios.post<TokenResponse>(
+      'https://accounts.spotify.com/api/token',
+      bodyParams,
+      {
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+          Authorization: 'Basic ' + btoa(`${clientId}:${clientSecret}`),
+        },
+      }
+    );
+
+    accessToken.value = response.data.access_token;
+    localStorage.setItem('spotify_access_token', accessToken.value);
+
+    fetchRecentTracks();
+  } catch (error) {
+    console.error('Error refreshing access token:', error);
+    loading.value = false;
+  }
+};
+
+const fetchRecentTracks = async (): Promise<void> => {
+  if (!accessToken.value) return;
+
+  try {
+    const response = await axios.get<{ items: SpotifyTrack[] }>(
+      'https://api.spotify.com/v1/me/player/recently-played',
+      {
+        headers: {
+          Authorization: `Bearer ${accessToken.value}`,
+        },
+      }
+    );
+
+    recentTracks.value = response.data.items;
+    topThreeTracks.value = recentTracks.value.slice(0, 3);
+    loading.value = false;
+  } catch (error) {
+    if (axios.isAxiosError(error) && error.response?.status === 401) {
+      refreshAccessToken();
+    } else {
+      console.error('Error fetching recent tracks:', error);
+      loading.value = false;
+    }
+  }
+};
+
+// Mount the component
 onMounted(() => {
-    initializeAuth();
+  initializeAuth();
 });
 </script>
-
 <style scoped>
 .main {
     background-color: white;

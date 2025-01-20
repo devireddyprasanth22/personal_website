@@ -5,13 +5,11 @@
         <!-- Image -->
         <div class="w-3/6 object-cover flex justify-center items-center overflow-hidden">
             <a :href=gitURL target="_blank">
-                <img class="opacity-50 hover:opacity-100 shrink-0 min-h-full min-w-full max-h-[400px]" :src=imageURL
-                    alt="Project Image" loading="eager">
+                <img v-if="imageURL" class="opacity-50 hover:opacity-100 shrink-0 min-h-full min-w-full max-h-[400px]" :src=imageURL
+                    alt="Project Image" loading="lazy">
             </a>
         </div>
         <div class="w-3/6 mt-[15px] mx-[5px] p-[20px] bg-inherit relative">
-
-            <!--add svg of star-->
 
             <!-- Title -->
             <h2 class=" hover:text-accent text-[25px] mb-[20px] text-white font-semibold bg-inherit">{{ title }}
@@ -36,8 +34,6 @@
                 </button>
 
             </a>
-            <!-- <div>
-</div> -->
 
         </div>
 
@@ -49,8 +45,6 @@
         <!-- Content Container -->
         <div class="w-3/6 mt-[15px] mx-[5px] p-[20px] bg-inherit relative">
 
-            <!--add svg of star-->
-
             <!-- Title -->
             <h2 class=" hover:text-accent text-[25px] mb-[20px] text-white font-semibold bg-inherit">{{ title }}
             </h2>
@@ -74,29 +68,31 @@
                 </button>
 
             </a>
-            <!-- <div>
-            </div> -->
 
         </div>
 
         <!-- Image -->
         <div class="w-3/6 object-cover  flex justify-center items-center overflow-hidden">
             <a :href=gitURL target="_blank">
-                <img class=" opacity-50 hover:opacity-100 shrink-0 min-h-full min-w-full " :src=imageURL
-                    alt="Project Image" loading="eager">
+                <img v-if="imageURL" class=" opacity-50 hover:opacity-100 shrink-0 min-h-full min-w-full " :src=imageURL
+                    alt="Project Image" loading="lazy">
             </a>
         </div>
     </div>
 
 </template>
-<script setup>
-defineProps({
-    reversed: Boolean,
-    title: String,
-    description: String,
-    imageURL: String,
-    gitURL: String
-})
+<script setup lang="ts">
+import { defineProps, withDefaults } from 'vue';
+interface Props {
+    reversed: boolean;
+    title: string;
+    description: string;
+    imageURL: string;
+    gitURL: string;
+}
+
+defineProps<Props>();
+
 // export default {
 //     name: 'ProjectTile',
 //     props: {
@@ -110,7 +106,7 @@ defineProps({
 //         },
 //         description: {
 //             type: String,
-//             required: true``
+//             required: true
 //         },
 //         imageURL: {
 //             type: String,

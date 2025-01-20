@@ -6,17 +6,23 @@
                 <h2 class="max-w-xl mb-2 text-2xl tracking-tight leading-none md:text-5xl xl:text-5xl dark:text-black">
                     Interests</h2>
             </div>
-
-            <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg w-2/3 h-12 ">
-            </div>
-            <div class="w-1/3">
-                <Spotify></Spotify>
-            </div>
-
+            <p class="px-48 mt-4 text-lg text-gray-600 md:text-xl xl:text-2xl dark:text-gray-800">
+                Bouldering
+                <img class="inline-block align-middle" width="32" height="32"
+                    src="https://img.icons8.com/emoji/48/man-climbing.png" alt="man-climbing" />
+                Gym <img class="inline-block align-middle" width="32" height="32"
+                    src="https://img.icons8.com/emoji/50/man-lifting-weights.png" alt="man-lifting-weights" />
+                Travelling <img class="inline-block align-middle" width="32" height="32"
+                    src="https://img.icons8.com/office/40/trekking.png" alt="trekking" /> Reading
+                <img class="inline-block align-middle" width="32" height="32"
+                    src="https://img.icons8.com/color/50/open-book.png" alt="open-book" />
+                Pool <img class="inline-block align-middle" width="32"
+                    height="32" src="https://img.icons8.com/emoji/50/pool-8-ball.png" alt="pool-8-ball" />
+            </p>
         </div>
 
     </section>
 </template>
-<script setup>
-import Spotify from './Spotify.vue';
+<script setup lang="ts">
+import Spotify from '@/components/Spotify.vue';
 </script>
