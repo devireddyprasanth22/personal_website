@@ -30,10 +30,16 @@
                     </a>
                 </div>
             </div>
-            <div class="w-1/3">
-                <img class="rounded-lg shadow-lg" src="/hero_pic.jpg"
-                    style="height: 500px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
-            </div>
+            <div class="w-1/3 relative">
+    <div id="carousel" class="rounded-lg shadow-lg overflow-hidden" style="height: 500px; position: relative;">
+        <img class="carousel-image" src="/hero_pic.jpg" alt="Hero" style="width: 100%; height: 100%; object-fit: cover;">
+        <img class="carousel-image hidden" src="/boulder1.jpg" alt="Boulder" style="width: 100%; height: 100%; object-fit: cover;">
+        <img class="carousel-image hidden" src="/photo.jpg" alt="Photo" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
+    <!-- Navigation buttons -->
+    <button id="prev" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-2 rounded-l-lg">‹</button>
+    <button id="next" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-2 rounded-r-lg">›</button>
+</div>
         </div>
 
     </section>
@@ -50,6 +56,8 @@
     /* Pivot around the bottom-left palm */
     display: inline-block;
 }
+
+
 
 @keyframes wave-animation {
     0% {
@@ -91,39 +99,87 @@
 import { onMounted } from 'vue';
 import { annotate, annotationGroup } from 'rough-notation';
 
+// Carousel functionality
 onMounted(() => {
-    // Type annotations for elements
+    // Carousel setup
+    const images = document.querySelectorAll('.carousel-image') as NodeListOf<HTMLElement>;
+    const prevButton = document.getElementById('prev') as HTMLElement;
+    const nextButton = document.getElementById('next') as HTMLElement;
+    let currentIndex = 0;
+    let interval: number;
+
+    const showImage = (index: number) => {
+        images.forEach((img, i) => {
+            img.classList.toggle('hidden', i !== index);
+        });
+    };
+
+    const nextImage = () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+    };
+
+    const prevImage = () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage(currentIndex);
+    };
+
+    const startCarousel = () => {
+        interval = window.setInterval(nextImage, 5000);
+    };
+
+    const stopCarousel = () => {
+        clearInterval(interval);
+    };
+
+    if (prevButton && nextButton) {
+        prevButton.addEventListener('click', () => {
+            stopCarousel();
+            prevImage();
+            startCarousel();
+        });
+
+        nextButton.addEventListener('click', () => {
+            stopCarousel();
+            nextImage();
+            startCarousel();
+        });
+    }
+
+    showImage(currentIndex);
+    startCarousel();
+
+    // Rough Notation functionality
     const e1: HTMLElement | null = document.querySelector('#e1');
     const e2: HTMLElement | null = document.querySelector('#e2');
     const e3: HTMLElement | null = document.querySelector('#e3');
 
     if (e1 && e2 && e3) {
-        // Type annotations for annotations
         const a1 = annotate(e1, {
             type: 'underline',
             color: 'red',
             multiline: true,
             animationDuration: 1000,
-            iterations: 1
+            iterations: 1,
         });
         const a2 = annotate(e2, {
             type: 'underline',
             color: 'red',
             multiline: true,
             animationDuration: 1000,
-            iterations: 1
+            iterations: 1,
         });
         const a3 = annotate(e3, {
             type: 'underline',
             color: 'red',
             multiline: true,
             animationDuration: 1000,
-            iterations: 1
+            iterations: 1,
         });
 
-        // Group annotations
         const arr = annotationGroup([a1, a2, a3]);
         arr.show();
     }
 });
 </script>
+
