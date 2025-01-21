@@ -7,7 +7,7 @@
             class="text-gray-300 hover:bg-green-900 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
           <a href="@/components/Projects.vue"
             class="text-gray-300 hover:bg-green-900 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Projects</a>
-          <a href="#"
+          <a href=""
             class="text-gray-300 hover:bg-green-900 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
         </div>
       </div>

@@ -32,7 +32,8 @@
                 </div>
             </div>
             <div class="w-1/3 relative">
-                <div id="carousel" class="rounded-lg shadow-lg overflow-hidden" style="height: 500px; position: relative;">
+                <div id="carousel" class="rounded-lg shadow-lg overflow-hidden"
+                    style="height: 500px; position: relative;">
                     <div class="carousel-container" style="position: relative; height: 100%; width: 100%;">
                         <img class="carousel-image" src="@/assets/images/carousel/hero_pic.jpg" alt="Hero">
                         <img class="carousel-image" src="@/assets/images/carousel/boulder1.jpg" alt="Boulder">
@@ -41,8 +42,10 @@
                         <img class="carousel-image" src="@/assets/images/carousel/ocean.jpg" alt="Photo">
                     </div>
                 </div>
-                <button id="prev" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-2 rounded-l-lg opacity-75 hover:opacity-100 transition-opacity -left-8">‹</button>
-                <button id="next" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-2 rounded-r-lg opacity-75 hover:opacity-100 transition-opacity -right-8">›</button>
+                <button id="prev"
+                    class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-2 rounded-l-lg opacity-75 hover:opacity-100 transition-opacity -left-8">‹</button>
+                <button id="next"
+                    class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-2 rounded-r-lg opacity-75 hover:opacity-100 transition-opacity -right-8">›</button>
             </div>
         </div>
 
@@ -60,6 +63,7 @@
     /* Pivot around the bottom-left palm */
     display: inline-block;
 }
+
 .carousel-container {
     position: relative;
 }
@@ -123,8 +127,8 @@ import TechStack from '@/components/TechStack.vue'
 
 // Carousel functionality
 onMounted(() => {
-     // Carousel setup
-     const images = document.querySelectorAll('.carousel-image') as NodeListOf<HTMLElement>;
+    // Carousel setup
+    const images = document.querySelectorAll('.carousel-image') as NodeListOf<HTMLElement>;
     const prevButton = document.getElementById('prev') as HTMLElement;
     const nextButton = document.getElementById('next') as HTMLElement;
     let currentIndex = 0;
@@ -156,7 +160,7 @@ onMounted(() => {
 
     // Initialize first image
     showImage(currentIndex);
-    
+
     if (prevButton && nextButton) {
         prevButton.addEventListener('click', () => {
             stopCarousel();
