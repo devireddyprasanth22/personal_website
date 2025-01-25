@@ -7,7 +7,7 @@
                     Contact Me</h2>
             </div>
             <div class="nav-sm:w-[80%] ssm:w-[85%] w-2/3 flex justify-center flex-col  mx-auto select-none mb-[50px]">
-                <form ref="form" action="#" class="space-y-8" name="contact" netlify data-netlify="true">
+                <form ref="form" action="#" class="space-y-8" name="contact" method="POST" netlify>
                     <!-- Hidden input to specify the form name for Netlify -->
                     <input type="hidden" name="form-name" value="contact">
 
