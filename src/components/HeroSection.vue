@@ -17,7 +17,7 @@
                             id="e2"> molecular modelling using machine learning</span> and <span id="e3">HPC to solve
                             computationally intensive tasks</span></p>
                     <TechStack></TechStack>
-                    <a href="https://drive.google.com/file/d/15N7mCcUF-9FiI2pAZCvAox23z95Qt768/view?usp=share_link"
+                    <a href="https://drive.google.com/file/d/1Fi4ivOXWM8scCUxP7VCnqu4TrMq4f9UC/view?usp=sharing"
                         target="_blank">
                         <button
                             class="cursor-pointer flex justify-between bg-gray-800 px-3 py-2 rounded-full text-white tracking-wider shadow-xl hover:bg-gray-900 hover:scale-105 duration-500 hover:ring-1 font-mono w-[120px]">
@@ -43,9 +43,9 @@
                     </div>
                 </div>
                 <button id="prev"
-                    class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-2 rounded-l-lg opacity-75 hover:opacity-100 transition-opacity -left-10">‹</button>
+                    class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-2 rounded-l-lg opacity-75 hover:opacity-100 transition-opacity -left-8">‹</button>
                 <button id="next"
-                    class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-2 rounded-r-lg opacity-75 hover:opacity-100 transition-opacity -right-10">›</button>
+                    class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-2 rounded-r-lg opacity-75 hover:opacity-100 transition-opacity -right-8">›</button>
             </div>
         </div>
 

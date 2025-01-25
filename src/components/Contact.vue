@@ -36,7 +36,7 @@
                     </div>
 
                     <button type="submit"
-                        class="bg-slate-700 hover:bg-slate-950 text-white font-mono font-bold py-2 px-4 rounded-full flex justify-between ">Send
+                        class="mt-2 bg-slate-700 hover:bg-slate-950 text-white font-mono font-bold py-2 px-4 rounded-full flex justify-between ">Send
                         message</button>
                 </form>
             </div>
