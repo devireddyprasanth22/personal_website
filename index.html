@@ -8,6 +8,13 @@
   </head>
   <body>
     <div id="app"></div>
+     <!-- Hidden static form for Netlify -->
+  <form name="contact" method="POST" data-netlify="true" hidden>
+    <input type="hidden" name="form-name" value="contact">
+    <input type="email" name="email">
+    <textarea name="message"></textarea>
+    <button type="submit">Send</button>
+  </form>
     <script type="module" src="src/main.ts"></script>
   </body>
 </html>
