@@ -2,7 +2,7 @@
     <section class="mt-24">
         <div class="max-w-screen-xl px-4 py-8 mx-auto flex mb-4">
 
-            <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 w-2/3 h-12 ">
+            <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-8 w-2/3 h-12 ">
                 <div class="mr-auto place-self-center lg:col-span-7 py-12">
                     <h2
                         class="max-w-xl mb-2 text-2xl tracking-tight leading-none md:text-5xl xl:text-7xl dark:text-black">
@@ -43,9 +43,9 @@
                     </div>
                 </div>
                 <button id="prev"
-                    class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-2 rounded-l-lg opacity-75 hover:opacity-100 transition-opacity -left-8">‹</button>
+                    class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-2 rounded-l-lg opacity-75 hover:opacity-100 transition-opacity -left-10">‹</button>
                 <button id="next"
-                    class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-2 rounded-r-lg opacity-75 hover:opacity-100 transition-opacity -right-8">›</button>
+                    class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-2 rounded-r-lg opacity-75 hover:opacity-100 transition-opacity -right-10">›</button>
             </div>
         </div>
 

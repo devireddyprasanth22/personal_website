@@ -4,7 +4,7 @@
       <div class="relative flex h-16 items-center justify-between">
         <div class="flex items-baseline space-x-4 ml-auto">
           <a href="@/components/HeroSection.vue"
-            class="text-gray-300 hover:bg-green-900 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+            class="text-gray-300 hover:bg-green-900 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About Me</a>
           <a href="@/components/Projects.vue"
             class="text-gray-300 hover:bg-green-900 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Projects</a>
           <a href=""

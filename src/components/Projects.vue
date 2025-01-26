@@ -26,10 +26,10 @@
     </section>
 </template>
 <script setup lang="ts">
-import SHEMS from '@/assets/images/projects/SHEMS.png'
-import trolley from '@/assets/images/projects/trolley.png'
-import Rentconnect from '@/assets/images/projects/Rentconnect.png'
-import pswd from '@/assets/images/projects/pswd.png'
+import SHEMS from '@/assets/images/projects/SHEMS_2.png'
+import trolley from '@/assets/images/projects/trolley_2.png'
+import Rentconnect from '@/assets/images/projects/Rentconnect_2.png'
+import pswd from '@/assets/images/projects/pswd_2.png'
 import ProjectTile from '@/components/ProjectTile.vue';
 
 </script>
