@@ -1,22 +1,21 @@
 <template>
     <section id="about" class="mt-24">
-        <div class="max-w-screen-xl px-4 py-8 mx-auto flex mb-4">
-
-            <div class="grid max-w-screen-xl px-4 w-2/3 h-12 ">
+        <div class="max-w-screen-xl px-4 py-8 mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 mb-4">
+            <div class="lg:col-span-2">
                 <div class="mr-auto place-self-center lg:col-span-7 py-12">
                     <h2
-                        class="max-w-xl mb-2 text-2xl tracking-tight leading-none md:text-5xl xl:text-7xl dark:text-black">
+                        class="max-w-xl mb-2 text-5xl md:text-7xl tracking-tight leading-none xl:text-7xl dark:text-black text-center lg:text-left">
                         Hi, I am Prasanth <span class="wave">👋</span></h2>
                     <p
-                        class="leading-8 max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-2xl dark:text-gray-800 ">
+                        class="leading-8 max-w-2xl mb-6 font-light text-gray-500 text-xl lg:mb-8 md:text-lg lg:text-2xl dark:text-gray-800 text-center lg:text-left">
                         A software engineer dedicated to exploring different technologies and applying learning in
                         practical environments. </p>
                     <p
-                        class="leading-8 max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-2xl dark:text-gray-800 ">
+                        class="leading-8 max-w-2xl mb-6 font-light text-gray-500 text-xl lg:mb-8 md:text-lg lg:text-2xl dark:text-gray-800 text-center lg:text-left ">
                         Some of my recent works include <span id="e1">smart energy management systems</span>, <span
                             id="e2"> molecular modelling using machine learning</span> and <span id="e3">HPC to solve
                             computationally intensive tasks</span></p>
-                    <div class="flex">
+                    <div class="flex justify-center lg:justify-start gap-4">
                         <a href="https://github.com/devireddyprasanth22" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48"
                                 viewBox="0 0 50 50">
@@ -50,7 +49,7 @@
 
                 </div>
             </div>
-            <div class="w-1/3 relative">
+            <div class="lg:col-span-1">
                 <div id="carousel" class="rounded-lg shadow-lg overflow-hidden"
                     style="height: 500px; position: relative;">
                     <div class="carousel-container" style="position: relative; height: 100%; width: 100%;">
