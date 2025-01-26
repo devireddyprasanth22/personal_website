@@ -13,26 +13,27 @@
                     <div>
                         <p>
                             <label class="block mb-2 text-sm font-bold text-gray-900 dark:text-gray-950 text-left">Your
-                                Name: <input type="text" name="name"
+                                Name <input type="text" name="name"
                                     class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
                                     placeholder="Name" /></label>
                         </p>
                     </div>
                     <div>
-                        <label class="block mb-2 text-sm font-bold text-gray-900 dark:text-gray-950 text-left">Your
-                            email</label>
-                        <input type="email" name="email"
-                            class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-                            placeholder="name@email.com" required>
+                        <label class="block mb-2 text-sm font-bold text-gray-900 dark:text-gray-950 text-left">Your email
+                            <input type="email" name="email"
+                                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                                placeholder="name@email.com" required>
+                           </label>
                     </div>
 
                     <div class="sm:col-span-2">
                         <label for="message"
                             class="block mb-2 text-sm font-bold text-gray-900 dark:text-gray-950 text-left">Your
-                            message</label>
-                        <textarea id="message" name="message" rows="6"
-                            class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                            placeholder="Leave a message..." required></textarea>
+                            message
+                            <textarea id="message" name="message" rows="6"
+                                class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                placeholder="Leave a message..." required></textarea>
+                        </label>
                     </div>
 
                     <button type="submit"

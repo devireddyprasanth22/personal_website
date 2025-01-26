@@ -42,11 +42,11 @@
                         <img class="carousel-image" src="@/assets/images/carousel/ocean.png" alt="Photo">
                     </div>
                 </div>
-                <button id="prev"
+                <!-- <button id="prev"
                     class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-2 rounded-l-lg opacity-75 hover:opacity-100 transition-opacity -left-10">‹</button>
                 <button id="next"
                     class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-2 rounded-r-lg opacity-75 hover:opacity-100 transition-opacity -right-10">›</button>
-            </div>
+            --></div> 
         </div>
 
     </section>
