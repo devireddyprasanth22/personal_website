@@ -4,14 +4,14 @@
             <div class="lg:col-span-2">
                 <div class="mr-auto place-self-center lg:col-span-7 py-12">
                     <h2
-                        class="max-w-xl mb-2 text-5xl md:text-7xl tracking-tight leading-none xl:text-7xl dark:text-black text-center lg:text-left">
+                        class="max-w-xl mb-2 text-5xl md:text-7xl tracking-tight leading-none xl:text-7xl dark:text-black text-center lg:text-left whitespace-nowrap display:inline">
                         Hi, I am Prasanth <span class="wave">👋</span></h2>
                     <p
                         class="leading-8 max-w-2xl mb-6 font-light text-gray-500 text-xl lg:mb-8 md:text-lg lg:text-2xl dark:text-gray-800 text-center lg:text-left">
                         A software engineer dedicated to exploring different technologies and applying learning in
                         practical environments. </p>
                     <p
-                        class="leading-8 max-w-2xl mb-6 font-light text-gray-500 text-xl lg:mb-8 md:text-lg lg:text-2xl dark:text-gray-800 text-center lg:text-left ">
+                        class="lesading-8 max-w-2xl mb-6 font-light text-gray-500 text-xl lg:mb-8 md:text-lg lg:text-2xl dark:text-gray-800 text-center lg:text-left ">
                         Some of my recent works include <span id="e1">smart energy management systems</span>, <span
                             id="e2"> molecular modelling using machine learning</span> and <span id="e3">HPC to solve
                             computationally intensive tasks</span></p>

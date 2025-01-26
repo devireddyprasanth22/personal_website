@@ -27,11 +27,12 @@
     </div>
 
     <!--Large screen-->
-    <div div v-if="reversed" class="tile-sp:hidden max-sm:hidden hover:translate-y-[-5px] w-[70%] mx-auto my-[75px] bg-gray-800 border-accent border-opacity-100 flex flex-row shadow-lg "
+    <div div v-if="reversed" class="hidden lg:flex hover:translate-y-[-5px] w-[70%] mx-auto my-[75px] bg-gray-800 border-accent border-opacity-100 shadow-lg"
+
         style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
         <!-- Image -->
         <div class="w-3/6 object-cover flex justify-center items-center overflow-hidden">
-            <a :href=gitURL target="_blank">
+            <a :href=gitURL target="_blank" style="height: 100%; padding: 0; object-fit: contain;">
                 <img v-if="imageURL" class="opacity-50 hover:opacity-100 shrink-0 min-h-full min-w-full max-h-[400px]" :src=imageURL
                     alt="Project Image" loading="lazy">
             </a>
@@ -66,7 +67,8 @@
 
     </div>
     <!--Content on left and project pic on left-->
-    <div v-else class="tile-sp:hidden max-sm:hidden hover:translate-y-[-5px] w-[70%] mx-auto my-[75px] bg-gray-800 border-accent border-opacity-100 flex flex-row shadow-lg "
+    <div v-else class="hidden lg:flex hover:translate-y-[-5px] w-[70%] mx-auto my-[75px] bg-gray-800 border-accent border-opacity-100 shadow-lg"
+
         style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
         <!-- Content Container -->
         <div class="w-3/6 mt-[15px] mx-[5px] p-[20px] bg-inherit relative">
@@ -99,7 +101,7 @@
 
         <!-- Image -->
         <div class="w-3/6 object-cover  flex justify-center items-center overflow-hidden">
-            <a :href=gitURL target="_blank">
+            <a :href=gitURL target="_blank" style="height: 100%; padding: 0; object-fit: contain;">
                 <img v-if="imageURL" class=" opacity-50 hover:opacity-100 shrink-0 min-h-full min-w-full " :src=imageURL
                     alt="Project Image" loading="lazy">
             </a>

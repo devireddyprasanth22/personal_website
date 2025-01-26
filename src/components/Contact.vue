@@ -2,10 +2,11 @@
     <section id="contact" class="mt-16">
         <div class="text-center">
             <div
-                class="px-48 py-3 flex items-center text-sm text-gray-800 before:flex-1 before:border-t before:border-gray-200 before:me-6 after:flex-1 after:border-t after:border-gray-200 after:ms-6 dark:text-white dark:before:border-neutral-600 dark:after:border-neutral-600">
-                <h2 class="max-w-xl mb-2 text-5xl tracking-tight leading-none md:text-5xl xl:text-5xl dark:text-black">
-                    Contact Me</h2>
-            </div>
+  class="px-6 sm:px-48 py-3 flex flex-col sm:flex-row items-center sm:items-center text-sm text-gray-800 before:flex-1 before:border-t before:border-gray-200 before:me-6 after:flex-1 after:border-t after:border-gray-200 after:ms-6 dark:text-white dark:before:border-neutral-600 dark:after:border-neutral-600">
+  <h2 class="text-center sm:text-left max-w-xl mb-2 text-5xl tracking-tight leading-none md:text-5xl xl:text-5xl dark:text-black">
+   Contact Me
+  </h2>
+</div>
             <div class="nav-sm:w-[80%] ssm:w-[85%] w-2/3 flex justify-center flex-col  mx-auto select-none mb-[50px]">
                 <form name="contact" method="POST" data-netlify="true">
                     <!-- Hidden input to specify the form name for Netlify -->
