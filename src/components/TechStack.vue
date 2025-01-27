@@ -6,7 +6,7 @@
                     <h2 class="font-bold lg:text-2xl dark:text-gray-800">
                         Tech and tools I use
                     </h2>
-                    <div class="container__techstacks flex gap-1">
+                    <div class="container__techstacks flex gap-1 sm: flex-wrap">
                         <img
                             v-for="techstack in techStack"
                             :key="techstack.name"
