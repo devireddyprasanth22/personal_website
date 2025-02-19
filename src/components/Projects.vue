@@ -10,6 +10,12 @@
         </div>
         <ProjectTile 
         :special=true
+        :reversed=true title="Simulating Metalllic Glasses using Machine Learning and Computational Techniques"
+            description="This project was part of my internship program with Pawsey Supercomputing Research Centre(CSIRO) and University of Melbourne, and explores the formation of metallic glasses, specifically a gold silicon alloy, using computational techniques including ML"
+            :imageURL="MetallicGlass" gitURL="https://github.com/devireddyprasanth22/ml-metal-glass-sim">
+        </ProjectTile>
+        <ProjectTile 
+        :special=true
         :reversed=false title="Smart Energy Management System Dashboard"
             description="An energy managment dashboard that allows users to understand their household consumption and turn appliances on/off whenever needed"
             :imageURL="SHEMS" gitURL="https://github.com/MonashSmartCityLivingLab/react_dashboard">
@@ -40,5 +46,5 @@ import trolley from '@/assets/images/projects/trolley_2.png'
 import Rentconnect from '@/assets/images/projects/Rentconnect_2.png'
 import pswd from '@/assets/images/projects/pswd_2.png'
 import ProjectTile from '@/components/ProjectTile.vue';
-
+import MetallicGlass from '@/assets/images/projects/prasanth_devireddy-Poster.png'
 </script>

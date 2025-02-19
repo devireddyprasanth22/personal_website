@@ -9,12 +9,11 @@
                     <p
                         class="leading-8 max-w-2xl mb-6 font-light text-gray-500 text-xl lg:mb-8 md:text-lg lg:text-2xl dark:text-gray-800 text-center lg:text-left">
                         A software engineer dedicated to exploring different technologies and applying learning in
-                        practical environments. </p>
+                        practical environments. Outside of work, you can find me bouldering, playing pool or reading a book  </p>
                     <p
                         class="lesading-8 max-w-2xl mb-6 font-light text-gray-500 text-xl lg:mb-8 md:text-lg lg:text-2xl dark:text-gray-800 text-center lg:text-left ">
-                        Some of my recent works include <span id="e1">smart energy management systems</span>, <span
-                            id="e2"> molecular modelling using machine learning</span> and <span id="e3">HPC to solve
-                            computationally intensive tasks</span></p>
+                        Some of my recent works include <span id="e1">smart energy management systems</span> and <span
+                            id="e2"> molecular modelling using machine learning and HPC</span></p>
                     <div class="flex justify-center lg:justify-start gap-4">
                         <a href="https://github.com/devireddyprasanth22" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48"
@@ -32,7 +31,7 @@
                                 </path>
                             </svg>
                         </a>
-                        <a href="https://drive.google.com/file/d/1Fi4ivOXWM8scCUxP7VCnqu4TrMq4f9UC/view?usp=sharing"
+                        <a href="https://drive.google.com/file/d/1IqP7RWEuVkkY2D7Nm1pji6QUagW6NkeD/view?usp=share_link"
                             target="_blank" class="mt-2">
                             <button
                                 class="cursor-pointer flex justify-between bg-gray-800 px-3 py-2 rounded-full text-white tracking-wider shadow-xl hover:bg-gray-900 hover:scale-105 duration-500 hover:ring-1 font-mono w-[120px]">
@@ -199,9 +198,8 @@ onMounted(() => {
     // Rough Notation functionality
     const e1: HTMLElement | null = document.querySelector('#e1');
     const e2: HTMLElement | null = document.querySelector('#e2');
-    const e3: HTMLElement | null = document.querySelector('#e3');
 
-    if (e1 && e2 && e3) {
+    if (e1 && e2) {
         const a1 = annotate(e1, {
             type: 'underline',
             color: 'red',
@@ -216,15 +214,7 @@ onMounted(() => {
             animationDuration: 1000,
             iterations: 1,
         });
-        const a3 = annotate(e3, {
-            type: 'underline',
-            color: 'red',
-            multiline: true,
-            animationDuration: 1000,
-            iterations: 1,
-        });
-
-        const arr = annotationGroup([a1, a2, a3]);
+        const arr = annotationGroup([a1, a2]);
         arr.show();
     }
 });
