@@ -27,7 +27,7 @@
     </div>
     
     <div 
-    class="relative bg-black text-white rounded-lg overflow-hidden transition-all duration-300 hover:ring-2 hover:ring-gray-400 w-[30%]"
+    class="hidden lg:block relative bg-black text-white rounded-lg overflow-hidden transition-all duration-300 hover:ring-2 hover:ring-gray-400 w-[30%]"
     @click="toggleExpand"
   >
     <!-- Project Image -->
