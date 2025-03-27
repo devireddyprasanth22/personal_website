@@ -9,7 +9,7 @@
                     <p
                         class="leading-8 max-w-2xl mb-6 font-light text-gray-500 text-xl lg:mb-8 md:text-lg lg:text-2xl dark:text-gray-800 text-center lg:text-left">
                         A software engineer dedicated to exploring different technologies and applying learning in
-                        practical environments. Outside of work, you can find me bouldering, playing pool or reading a book  </p>
+                        practical environments. </p>
                     <p
                         class="lesading-8 max-w-2xl mb-6 font-light text-gray-500 text-xl lg:mb-8 md:text-lg lg:text-2xl dark:text-gray-800 text-center lg:text-left ">
                         Some of my recent works include <span id="e1">smart energy management systems</span> and <span

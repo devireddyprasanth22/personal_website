@@ -7,8 +7,8 @@
     <div class="px-2 sm:px-6 lg:px-8">
       <div class="relative flex h-16 items-center justify-between">
         <div class="flex items-baseline space-x-4 ml-auto">
-          <a href="#about"
-            class="text-gray-300 hover:underline hover:decoration-blue-500 decoration-4 px-3 py-2 rounded-md text-sm font-medium transition duration-200">About Me</a>
+          <a href="#home"
+            class="text-gray-300 hover:underline hover:decoration-blue-500 decoration-4 px-3 py-2 rounded-md text-sm font-medium transition duration-200">Home</a>
           <a href="#projects"
             class="text-gray-300 hover:underline hover:decoration-blue-500 decoration-4 px-3 py-2 rounded-md text-sm font-medium transition duration-200">Projects</a>
           <a href="#contact"
