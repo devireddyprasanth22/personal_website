@@ -3,7 +3,7 @@
         <section class="grid gap-1" style="gap: 2rem">
             <article class="container__main flex-column gap-1">
                 <div class="container__techstacks">
-                    <h2 class="font-bold lg:text-2xl dark:text-gray-800">
+                    <h2 class="font-bold lg:text-2xl dark:text-gray-100 text-gray-800">
                         Tech and tools I use
                     </h2>
                     <div class="container__techstacks flex gap-1 sm: flex-wrap">

@@ -1,13 +1,16 @@
 <template>
     <section id="contact" class="mt-16">
-        <div class="text-center">
+        <div class="flex items-center justify-center text-center">
             <div
-  class="px-6 sm:px-48 py-3 flex flex-col sm:flex-row items-center sm:items-center text-sm text-gray-800 before:flex-1 before:border-t before:border-gray-200 before:me-6 after:flex-1 after:border-t after:border-gray-200 after:ms-6 dark:text-white dark:before:border-neutral-600 dark:after:border-neutral-600">
-  <h2 class="text-center sm:text-left max-w-xl mb-2 text-5xl tracking-tight leading-none md:text-5xl xl:text-5xl dark:text-black">
-   Contact Me
-  </h2>
-</div>
-            <div class="max-w-screen-xl px-4 py-8 mx-auto  nav-sm:w-[80%] ssm:w-[85%] w-2/3 flex justify-center flex-col  mx-auto select-none mb-[50px]">
+                class="px-6 sm:px-48 py-3 flex flex-col sm:flex-row items-center sm:items-center text-sm text-gray-800 before:w-64 before:border-t before:border-gray-200 before:me-6 after:w-64 after:border-t after:border-gray-200 after:ms-6 dark:text-white dark:before:border-neutral-600 dark:after:border-neutral-600">
+                <h2
+                    class="text-center sm:text-left max-w-xl mb-2 text-5xl tracking-tight leading-none md:text-5xl xl:text-5xl dark:text-white text-black">
+                    Contact Me
+                </h2>
+            </div>
+        </div>
+            <div
+                class="max-w-screen-xl px-4 py-8 mx-auto  nav-sm:w-[80%] ssm:w-[85%] w-2/3 flex justify-center flex-col  mx-auto select-none mb-[50px]">
                 <form name="contact" method="POST" data-netlify="true">
                     <!-- Hidden input to specify the form name for Netlify -->
                     <input type="hidden" name="form-name" value="contact">
@@ -20,11 +23,12 @@
                         </p>
                     </div>
                     <div>
-                        <label class="block mb-2 text-sm font-bold text-gray-900 dark:text-gray-950 text-left">Your email
+                        <label class="block mb-2 text-sm font-bold text-gray-900 dark:text-gray-950 text-left">Your
+                            email
                             <input type="email" name="email"
                                 class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-slate-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
                                 placeholder="name@email.com" required>
-                           </label>
+                        </label>
                     </div>
 
                     <div class="sm:col-span-2">
@@ -42,7 +46,6 @@
                         message</button>
                 </form>
             </div>
-        </div>
     </section>
 </template>
 <script setup lang="ts">
