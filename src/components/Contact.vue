@@ -52,12 +52,12 @@
             </div>
 
             <!-- Contact Details Section -->
-            <div class="w-full sm:w-1/2 mb-8 sm:mb-0 pl-24 mt-4">
+            <div class="w-full sm:w-1/2 mb-8 sm:mb-0 pl-0 sm:pl-24 mt-4 sm:mt-0 mx-auto text-center">
                 <div class="mb-4">
                     <!-- Email Box -->
                     <div class="p-4 border border-gray-300 rounded-lg dark:bg-slate-800 flex items-center">
-                        <span class="flex items-center"> <svg viewBox="0 -2.5 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" width="16" height="16"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>email [#1572]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-340.000000, -922.000000)" fill="#ffffff"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M294,774.474 L284,765.649 L284,777 L304,777 L304,765.649 L294,774.474 Z M294.001,771.812 L284,762.981 L284,762 L304,762 L304,762.981 L294.001,771.812 Z" id="email-[#1572]"> </path> </g> </g> </g> </g></svg><a href="mailto:devireddyprasanth22@gmail.com"
-                                class="text-white ml-2">devireddyprasanth22@gmail.com</a></span>
+                        <span class="flex items-center flex-wrap"> <svg viewBox="0 -2.5 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" width="16" height="16"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>email [#1572]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-340.000000, -922.000000)" fill="#ffffff"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M294,774.474 L284,765.649 L284,777 L304,777 L304,765.649 L294,774.474 Z M294.001,771.812 L284,762.981 L284,762 L304,762 L304,762.981 L294.001,771.812 Z" id="email-[#1572]"> </path> </g> </g> </g> </g></svg><a href="mailto:devireddyprasanth22@gmail.com"
+                                class="text-white ml-2 break-all">devireddyprasanth22@gmail.com</a></span>
                     </div>
                 </div>
 

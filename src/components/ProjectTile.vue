@@ -27,8 +27,7 @@
     </div>
     
     <div 
-    class="hidden lg:block relative bg-black text-white rounded-lg overflow-hidden transition-all duration-300 hover:ring-2 hover:ring-gray-400 w-[30%]"
-    @click="toggleExpand"
+    class="hidden lg:block relative bg-black text-white rounded-lg overflow transition-all duration-300 hover:ring-2 hover:ring-gray-400 w-[30%]"
   >
     <!-- Project Image -->
     <div class="relative">
@@ -37,16 +36,9 @@
       <h3 class="absolute bottom-6 left-6 text-2xl font-bold">{{ title }}</h3>
     </div>
 
-    <!-- Description & Dropdown -->
-    <div class="transition-all duration-300" :class="isExpanded ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0 overflow-hidden'">
-      <div class="px-6 py-4 bg-gray-900 rounded-b-lg">
+    <div class="max-h-[400px] opacity-100">
+      <div class="px-6 py-4 bg-gray-900 rounded-b-lg h-48">
         <p class="text-gray-300 text-sm mb-3">{{ description }}</p>
-        
-        <div class="flex flex-wrap gap-2 mb-4">
-          <span v-for="tag in tags" :key="tag" class="px-2 py-1 text-xs font-semibold bg-gray-700 rounded">
-            {{ tag }}
-          </span>
-        </div>
 
         <div class="flex gap-4">
             <button
@@ -62,24 +54,11 @@
         </div>
       </div>
     </div>
-
-    <!-- Dropdown Arrow -->
-    <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2">
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 transition-transform duration-300" :class="isExpanded ? 'rotate-180' : ''" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M6 9l6 6 6-6"></path>
-      </svg>
-    </div>
   </div>
 
 
 </template>
 <script setup lang="ts">
-import { ref } from "vue";
 
-defineProps(["title", "description", "imageURL", "gitURL", "tags"]);
-const isExpanded = ref(false);
-
-const toggleExpand = () => {
-  isExpanded.value = !isExpanded.value;
-};
+defineProps(["title", "description", "imageURL", "gitURL", "tags"]); 
 </script>

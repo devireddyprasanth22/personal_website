@@ -42,7 +42,7 @@
 
                 </div>
             </div>
-            <div class="lg:col-span-1">
+            <div class="hidden md:block lg:block lg:col-span-1">
                 <div id="carousel" class="rounded-lg shadow-lg overflow-hidden"
                     style="height: 500px; position: relative;">
                     <div class="carousel-container" style="position: relative; height: 100%; width: 100%;">
@@ -53,11 +53,6 @@
                         <img class="carousel-image" src="@/assets/images/carousel/ocean.png" alt="Photo">
                     </div>
                 </div>
-                <!-- <button id="prev"
-                    class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-2 rounded-l-lg opacity-75 hover:opacity-100 transition-opacity -left-10">‹</button>
-                <button id="next"
-                    class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-2 rounded-r-lg opacity-75 hover:opacity-100 transition-opacity -right-10">›</button>
-            -->
             </div>
         </div>
 
