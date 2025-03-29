@@ -52,7 +52,7 @@
             </div>
 
             <!-- Contact Details Section -->
-            <div class="w-full sm:w-1/2 mb-8 sm:mb-0 pl-0 sm:pl-24 mt-4 sm:mt-0 mx-auto text-center">
+            <div class="w-full sm:w-1/2 mb-8 sm:mb-0 pl-0 sm:pl-24 sm:mt-0 mx-auto text-center py-4">
                 <div class="mb-4">
                     <!-- Email Box -->
                     <div class="p-4 border border-gray-300 rounded-lg dark:bg-slate-800 flex items-center">
