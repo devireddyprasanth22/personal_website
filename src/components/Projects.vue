@@ -2,7 +2,12 @@
     <section id="projects" class="mt-16">
         <div class="flex items-center justify-center text-center">
             <div
-                class="px-6 sm:px-48 py-3 flex flex-col sm:flex-row items-center sm:items-center text-sm before:w-64 before:border-t before:border-gray-200 before:me-6 after:w-64 after:border-t after:border-gray-200 after:ms-6 dark:text-white dark:before:border-neutral-600 dark:after:border-neutral-600">
+                class="px-6 sm:px-48 py-3 flex flex-col sm:flex-row items-center text-sm
+         before:w-64 before:border-t before:border-gray-200 before:me-6
+         after:w-64 after:border-t after:border-gray-200 after:ms-6
+         before:hidden sm:before:block
+         after:hidden sm:after:block
+         dark:text-white dark:before:border-neutral-600 dark:after:border-neutral-600">
                 <h2
                     class="text-center sm:text-left max-w-xl mb-2 text-5xl tracking-tight leading-none md:text-5xl xl:text-5xl dark:text-white light:text-grey-300">
                     Featured Projects
